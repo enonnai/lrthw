@@ -5,17 +5,17 @@ end
 
 def subtract(a, b)
   puts "SUBTRACTING #{a} - #{b}"
-  return a - b
+   a - b
 end
 
 def multiply(a, b)
   puts "MULTIPLYING #{a} * #{b}"
-  return a * b
+   a * b
 end
 
 def divide(a, b)
   puts "DIVIDING #{a} / #{b}"
-  return a / b
+   a / b
 end
 
 puts "Let's do some math with just functions!"
@@ -32,4 +32,7 @@ puts "Here is a puzzle."
 
 what = add(age, subtract(height,multiply(weight, divide(iq, 2))))
 
+formula = (height - (iq / 2 * weight)) + age
+
 puts "That becomes: #{what}. Can you do it by hand?"
+puts "Here is my formula: its result is #{formula}."
