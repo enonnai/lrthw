@@ -32,7 +32,7 @@ puts "Here is a puzzle."
 
 what = add(age, subtract(height,multiply(weight, divide(iq, 2))))
 
-formula = (height - (iq / 2 * weight)) + age
+formula = height - iq / 2 * weight + age
 
 puts "That becomes: #{what}. Can you do it by hand?"
 puts "Here is my formula: its result is #{formula}."
