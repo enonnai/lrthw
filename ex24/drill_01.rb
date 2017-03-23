@@ -27,6 +27,7 @@ irb(main):003:0> message = "%s is %d years old"
 irb(main):004:0> message = "%s is %d years old" % [name, age]
 => "Jane is 17 years old"
 
+
 Ruby has format specifiers. A format specifier determines how the string is going to look like. It begins with a % character. Format specifiers are put inside single or double quotes.
 
 The format specifier has the following fields:
