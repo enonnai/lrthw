@@ -1,14 +1,18 @@
-# I shall work on my game this weekend, I already have draw a map for it :)
-puts "****** WELCOME TO THE WIZARD-TO-BE GAME. PRESS ENTER TO START. ******"
-any_key = $stdin.gets.chomp
-def stars()
-  puts '-' * 50
-end
+puts  "****** WELCOME TO THE WIZARD-TO-BE GAME. PRESS ENTER TO START. ******"
+enter = $stdin.gets.chomp
+
+  def stars()
+    puts '-' * 50
+  end
 
 puts "Your coach stops and, as you get off, an elderly, sophisticated lady - supposedly a wizardess - approaches you and says: 'Welcome to Wandland! You have travelled a long way, as you have been admitted to the Wizard-to-be school! Follow this path. You don't want to be late for your first lesson, do you?'"
+
 stars
+
 puts "You get to the school's building and you're surprised to see that there's no one outside of it! You walk around the building. There are only two doors."
+
 stars
+
   def reception_room
     stars
     puts "The door opens: it's the reception room. A long bearded wizard asks you for the password to get in the classroom. You say:"
@@ -73,49 +77,49 @@ stars
     end
   end
 
-def die(why)
-  puts why, "Game over :("
-  stars
-  exit(0)
-end
-
-def riddle_method()
-  stars
-   puts "'Tell me now' - says Merlin - 'what do you say if I say 'The rain in Spain.. '"
-  stars
-   puts "Press 1 for: ' ..falls all down the drain.'"
-   puts "Press 2 for: ' ..falls mainly in the plain.'"
-
-  print "> "
-  riddle = $stdin.gets.chomp
-
-  if riddle == "1"
-    puts "'Not quite, but you've impressed me enough. Welcome to the Wizard-to-be school!'"
-   exit(0)
-  elsif riddle == "2"
-   puts "'Extraordinary! You like a good old musical movie. Welcome to the Wizard-to-be school!'"
-   exit(0)
-  else
+  def die(why)
+    puts why, "Game over :("
     stars
-   puts "Haha, no cheating! I'll say that again."
-   riddle_method
+    exit(0)
   end
-end
 
-def start
-  puts "Press 1 for: 'Let\'s knock on door 1.'\nPress 2 for: 'Let\'s knock on door 2.'"
+  def riddle_method()
+    stars
+    puts "'Tell me now' - says Merlin - 'what do you say if I say 'The rain in Spain.. '"
+    stars
+    puts "Press 1 for: ' ..falls all down the drain.'"
+    puts "Press 2 for: ' ..falls mainly in the plain.'"
 
-  print "> "
-  door = $stdin.gets.chomp
+    print "> "
+    riddle = $stdin.gets.chomp
 
-  if door == "1"
-    reception_room
-  elsif door == "2"
-    apprentice_room
-  else
-    puts "Sorry, I don't understand your choice."
-    start
+    if riddle == "1"
+      puts "'Not quite, but you've impressed me enough. Welcome to the Wizard-to-be school!'"
+      exit(0)
+    elsif riddle == "2"
+      puts "'Extraordinary! You like a good old musical movie. Welcome to the Wizard-to-be school!'"
+      exit(0)
+    else
+      stars
+      puts "Haha, no cheating! I'll say that again."
+      riddle_method
+    end
   end
-end
 
-start
+  def start
+    puts "Press 1 for: 'Let\'s knock on door 1.'\nPress 2 for: 'Let\'s knock on door 2.'"
+
+    print "> "
+    door = $stdin.gets.chomp
+
+    if door == "1"
+      reception_room
+    elsif door == "2"
+      apprentice_room
+    else
+      puts "Sorry, I don't understand your choice."
+      start
+    end
+  end
+
+  start
